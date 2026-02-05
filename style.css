@@ -64,9 +64,9 @@ li a:hover {
   color: #ff69b4; /* Pink saat hover, seperti permen yang menggoda */
 }
 
-/* Styling untuk section hero, yang merupakan bagian sambutan. Menggunakan background gradien lilac ke putih untuk efek modern dan lembut */
+/* Styling untuk section hero, yang merupakan bagian sambutan. Menggunakan background solid lilac untuk efek lembut dan kontras dengan teks putih */
 .hero {
-  background: linear-gradient(to right, #d4a5d4, #ffffff); /* Gradien dari lilac ke putih */
+  background-color: #d4a5d4; /* Solid lilac ungu muda, bukan gradasi agar berbeda dari teks */
   padding: 100px 2rem 50px; /* Padding atas lebih besar untuk akomodasi nav fixed */
   display: flex; /* Flexbox untuk layout konten dan gambar */
   align-items: center; /* Vertikal center */
@@ -82,15 +82,11 @@ li a:hover {
   max-width: 50%; /* Maksimal setengah lebar */
 }
 
-/* Styling untuk heading utama di hero - DIUBAH: Sekarang menggunakan gradasi ungu ke putih untuk teks "ERLINA PEBRIANTI" */
+/* Styling untuk heading utama di hero - DIUBAH: Sekarang menggunakan warna putih solid untuk teks "ERLINA PEBRIANTI", agar berbeda dari background lilac */
 .hero-content h1 {
   font-size: 3rem; /* Besar dan bold */
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #d4a5d4, #ffffff); /* Gradasi ungu (lilac) ke putih */
-  -webkit-background-clip: text; /* Untuk browser WebKit seperti Safari */
-  -webkit-text-fill-color: transparent; /* Buat teks transparan agar gradasi terlihat */
-  background-clip: text; /* Untuk browser lain */
-  color: transparent; /* Fallback untuk browser yang tidak mendukung */
+  color: #ffffff; /* Putih solid, bukan gradasi agar kontras dan berbeda dari background */
 }
 
 /* Styling untuk paragraf di hero */
