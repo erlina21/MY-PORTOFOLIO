@@ -1,357 +1,349 @@
-/* Reset default browser styles untuk konsistensi di semua browser */
-/* Ini menghilangkan margin, padding, dan box-sizing default agar kita bisa mengontrol sepenuhnya */
+/* Reset dan Font */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Mengatur font dasar untuk seluruh halaman, menggunakan font sans-serif yang modern */
-/* Warna latar belakang ungu muda (#E6E6FA adalah lavender) untuk kesan lembut dan modern */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333; /* Warna teks gelap untuk kontras */
-  background-color: #E6E6FA; /* Ungu muda sebagai latar belakang utama */
+  color: #333;
+  background-color: #FFFFFF; /* Putih sebagai background utama */
+  perspective: 1000px; /* Menambahkan perspektif untuk efek 3D global */
 }
 
-/* Styling untuk header, yang berisi navigasi */
-/* Menggunakan background putih untuk kontras dengan latar ungu */
+/* Header dan Navigasi */
 header {
-  background-color: #FFFFFF; /* Putih untuk header */
-  position: fixed; /* Navigasi tetap di atas saat scroll */
-  top: 0;
+  background-color: #E6E6FA; /* Ungu muda (lavender) */
+  padding: 1rem 0;
+  position: fixed;
   width: 100%;
-  z-index: 1000; /* Pastikan di atas konten lain */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk kedalaman */
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek 3D dengan bayangan */
+  transform-style: preserve-3d; /* Mendukung efek 3D */
 }
 
-/* Styling untuk navigasi */
-/* Menggunakan flexbox untuk menyusun logo dan menu secara horizontal */
 nav {
   display: flex;
-  justify-content: space-between; /* Logo di kiri, menu di kanan */
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* Padding untuk ruang di dalam nav */
-  max-width: 1200px; /* Lebar maksimal untuk tampilan laptop */
-  margin: 0 auto; /* Pusatkan nav */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Styling untuk logo */
-/* Warna ungu gelap untuk teks logo agar menonjol */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #7B68EE; /* Ungu gelap untuk aksen */
+  color: #FFFFFF; /* Putih untuk kontras */
+  transform: rotateX(5deg); /* Sedikit rotasi 3D untuk lucu */
+  transition: transform 0.3s ease;
 }
 
-/* Span di dalam logo untuk efek warna berbeda */
-/* Bagian "Porto" dalam warna ungu lebih gelap */
+.logo:hover {
+  transform: rotateX(0deg) scale(1.05); /* Efek lucu saat hover */
+}
+
 .logo span {
-  color: #4B0082; /* Ungu lebih gelap untuk kontras */
+  color: #DDA0DD; /* Ungu muda lebih gelap untuk aksen */
 }
 
-/* Styling untuk daftar menu navigasi */
-/* Menggunakan flexbox untuk menyusun item menu horizontal */
-nav ul {
-  list-style: none; /* Hilangkan bullet points */
+ul {
+  list-style: none;
   display: flex;
-  gap: 2rem; /* Jarak antar item menu */
 }
 
-/* Styling untuk link di menu navigasi */
-/* Warna ungu gelap, tanpa underline, dengan transisi halus saat hover */
-nav ul li a {
+ul li {
+  margin-left: 2rem;
+}
+
+ul li a {
+  color: #FFFFFF;
   text-decoration: none;
-  color: #7B68EE;
-  font-weight: 500;
-  transition: color 0.3s ease; /* Transisi warna saat hover */
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+  transform-style: preserve-3d;
 }
 
-/* Efek hover untuk link navigasi */
-/* Warna berubah menjadi ungu lebih gelap saat di-hover */
-nav ul li a:hover {
-  color: #4B0082;
+ul li a:hover {
+  color: #DDA0DD; /* Ungu muda pada hover */
+  transform: translateZ(10px) rotateY(5deg); /* Efek 3D lucu */
 }
 
-/* Styling untuk section hero (bagian home) */
-/* Menggunakan flexbox untuk menyusun konten teks dan gambar secara horizontal */
-/* Tinggi penuh viewport untuk efek hero yang menarik */
+/* Bagian Hero */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 2rem; /* Padding atas untuk menghindari header fixed */
+  padding: 5rem 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh; /* Tinggi minimal penuh layar */
-  background-color: #FFFFFF; /* Latar putih untuk kontras */
-  margin-top: 80px; /* Ruang atas untuk header fixed */
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  transform-style: preserve-3d;
 }
 
-/* Styling untuk konten teks di hero */
-/* Teks rata kiri, dengan jarak antar elemen */
 .hero-content {
-  flex: 1; /* Ambil ruang yang tersedia */
-  text-align: left;
+  flex: 1;
+  padding-right: 2rem;
+  transform: translateZ(20px); /* Efek kedalaman 3D */
 }
 
-/* Styling untuk paragraf pertama di hero */
-/* Warna ungu gelap untuk salam */
-.hero-content p:first-child {
-  font-size: 1.2rem;
-  color: #7B68EE;
-  margin-bottom: 0.5rem;
-}
-
-/* Styling untuk heading h1 di hero */
-/* Ukuran besar, warna ungu gelap */
 .hero-content h1 {
   font-size: 3rem;
-  color: #4B0082;
   margin-bottom: 1rem;
+  color: #E6E6FA; /* Ungu muda */
+  transform: rotateX(-2deg); /* Sedikit miring untuk lucu */
+  transition: transform 0.3s;
 }
 
-/* Styling untuk paragraf deskripsi di hero */
-/* Warna abu-abu gelap untuk teks biasa */
-.hero-content p:nth-child(3) {
-  font-size: 1.1rem;
-  color: #666;
+.hero-content h1:hover {
+  transform: rotateX(0deg) scale(1.02); /* Efek lucu */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #666;
 }
 
-/* Styling untuk tombol hero */
-/* Background ungu, teks putih, dengan efek hover */
 .btn-hero {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #7B68EE;
+  padding: 0.8rem 1.5rem;
+  background-color: #E6E6FA; /* Ungu muda */
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan 3D */
+  transform-style: preserve-3d;
 }
 
-/* Efek hover untuk tombol hero */
-/* Background menjadi ungu lebih gelap */
 .btn-hero:hover {
-  background-color: #4B0082;
+  background-color: #DDA0DD; /* Ungu muda lebih gelap */
+  transform: translateY(-5px) rotateX(10deg); /* Efek melompat lucu */
 }
 
-/* Styling untuk gambar logo di hero */
-/* Gambar di sebelah kanan, dengan ukuran maksimal */
-.hero-logo {
-  flex: 1;
-  text-align: center;
-}
-
-/* Styling untuk gambar di hero */
-/* Lebar maksimal 300px, border-radius untuk sudut melengkung */
 .hero-logo img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #E6E6FA; /* Ungu muda */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan 3D */
+  transform: rotateY(-5deg); /* Rotasi 3D lucu */
+  transition: transform 0.3s;
 }
 
-/* Styling umum untuk section container */
-/* Padding dan margin untuk ruang, max-width untuk laptop */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
+.hero-logo img:hover {
+  transform: rotateY(0deg) scale(1.05); /* Efek lucu saat hover */
 }
 
-/* Styling untuk section about */
-/* Background putih untuk kontras */
+/* Bagian About */
 .about {
+  padding: 4rem 2rem;
   background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  text-align: center;
+  transform-style: preserve-3d;
 }
 
-/* Styling untuk heading h2 di about */
-/* Warna ungu gelap, ukuran besar */
 .about h2 {
   font-size: 2.5rem;
-  color: #4B0082;
   margin-bottom: 2rem;
-  text-align: center;
+  color: #E6E6FA; /* Ungu muda */
+  transform: rotateX(3deg); /* Sedikit miring */
+  transition: transform 0.3s;
 }
 
-/* Styling untuk konten about */
-/* Teks rata kiri, dengan jarak antar paragraf */
+.about h2:hover {
+  transform: rotateX(0deg) scale(1.03); /* Efek lucu */
+}
+
 .about-content p {
+  max-width: 800px;
+  margin: 0 auto;
   font-size: 1.1rem;
   color: #333;
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
+  transform: translateZ(10px); /* Kedalaman 3D */
 }
 
-/* Styling untuk section proyek */
-/* Background ungu muda ringan untuk variasi */
+/* Bagian Proyek */
 .proyek {
-  background-color: #F3E5F5; /* Ungu muda lebih terang */
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  padding: 4rem 2rem;
+  background-color: #F8F8FF; /* Putih dengan sedikit ungu muda */
+  text-align: center;
+  transform-style: preserve-3d;
 }
 
-/* Styling untuk heading h2 di proyek */
-/* Sama seperti about */
 .proyek h2 {
   font-size: 2.5rem;
-  color: #4B0082;
   margin-bottom: 2rem;
-  text-align: center;
+  color: #E6E6FA; /* Ungu muda */
+  transform: rotateY(-2deg); /* Rotasi lucu */
+  transition: transform 0.3s;
 }
 
-/* Styling untuk grid proyek */
-/* Menggunakan CSS Grid untuk menyusun kartu proyek dalam 3 kolom (untuk laptop) */
-/* Gap untuk jarak antar kartu */
+.proyek h2:hover {
+  transform: rotateY(0deg) scale(1.02); /* Efek lucu */
+}
+
 .proyek-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom fleksibel, minimal 300px */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Styling untuk kartu proyek */
-/* Background putih, border-radius, box-shadow untuk efek kartu */
 .proyek-card {
   background-color: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(230, 230, 250, 0.3); /* Bayangan 3D dengan glow ungu muda */
+  transition: transform 0.3s, box-shadow 0.3s;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk efek hover */
+  transform-style: preserve-3d;
 }
 
-/* Efek hover untuk kartu proyek */
-/* Sedikit naik dan bayangan lebih gelap */
 .proyek-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-15px) rotateX(10deg) rotateY(5deg); /* Efek 3D lucu seperti kartu melayang */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 30px rgba(221, 160, 221, 0.4); /* Bayangan lebih dramatis */
 }
 
-/* Styling untuk gambar di kartu proyek */
-/* Lebar penuh, tinggi tetap untuk konsistensi */
 .proyek-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Potong gambar agar pas */
+  object-fit: cover;
+  transform: translateZ(5px); /* Kedalaman pada gambar */
 }
 
-/* Styling untuk info di kartu proyek */
-/* Padding untuk ruang dalam */
 .proyek-info {
   padding: 1rem;
+  transform: translateZ(10px); /* Kedalaman pada teks */
 }
 
-/* Styling untuk heading h3 di info kartu */
-/* Warna ungu gelap */
 .proyek-info h3 {
   font-size: 1.5rem;
-  color: #4B0082;
   margin-bottom: 0.5rem;
+  color: #E6E6FA; /* Ungu muda */
 }
 
-/* Styling untuk paragraf di info kartu */
-/* Warna abu-abu */
 .proyek-info p {
   color: #666;
 }
 
-/* Styling untuk section medsos */
-/* Background putih */
+/* Bagian Medsos */
 .medsos {
+  padding: 4rem 2rem;
   background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  text-align: center;
+  transform-style: preserve-3d;
 }
 
-/* Styling untuk heading h2 di medsos */
-/* Sama seperti sebelumnya */
 .medsos h2 {
   font-size: 2.5rem;
-  color: #4B0082;
   margin-bottom: 2rem;
-  text-align: center;
+  color: #E6E6FA; /* Ungu muda */
+  transform: rotateX(-3deg); /* Miring lucu */
+  transition: transform 0.3s;
 }
 
-/* Styling untuk daftar medsos */
-/* Flexbox untuk menyusun item horizontal, rata tengah */
+.medsos h2:hover {
+  transform: rotateX(0deg) scale(1.03); /* Efek lucu */
+}
+
 .medsos-list {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Wrap jika layar kecil */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Styling untuk item medsos */
-/* Text-decoration none, warna inherit */
 .medsos-item {
-  text-decoration: none;
-  color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+  transform-style: preserve-3d;
 }
 
-/* Efek hover untuk item medsos */
-/* Sedikit naik */
 .medsos-item:hover {
-  transform: translateY(-5px);
+  color: #E6E6FA; /* Ungu muda */
+  transform: translateZ(15px) rotateY(10deg); /* Efek 3D lucu */
 }
 
-/* Styling untuk gambar di item medsos */
-/* Ukuran tetap, border-radius */
 .medsos-item img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   margin-bottom: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan 3D */
+  transition: transform 0.3s;
 }
 
-/* Styling untuk span di item medsos */
-/* Warna ungu gelap */
+.medsos-item:hover img {
+  transform: scale(1.1) rotateX(5deg); /* Efek lucu pada gambar */
+}
+
 .medsos-item span {
-  font-weight: 500;
-  color: #7B68EE;
+  font-weight: bold;
 }
 
-/* Styling untuk footer */
-/* Background ungu gelap, teks putih, rata tengah */
+/* Footer */
 footer {
-  background-color: #4B0082;
+  background-color: #E6E6FA; /* Ungu muda */
   color: #FFFFFF;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1rem 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Bayangan 3D atas */
+  transform-style: preserve-3d;
 }
 
-/* Styling untuk paragraf di footer */
-/* Ukuran kecil */
 footer p {
-  font-size: 0.9rem;
+  margin: 0;
+  transform: translateZ(5px); /* Kedalaman */
 }
 
-/* Media query untuk responsivitas (meskipun fokus laptop, tambahkan untuk mobile) */
-/* Untuk layar kecil, ubah grid proyek menjadi 1 kolom */
+/* Responsivitas */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul {
+    margin-top: 1rem;
+  }
+
+  ul li {
+    margin: 0 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 6rem;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .hero-logo img {
+    width: 200px;
+    height: 200px;
+  }
+
   .proyek-grid {
     grid-template-columns: 1fr;
   }
-  .hero {
-    flex-direction: column; /* Tumpuk vertikal di mobile */
-    text-align: center;
-  }
-  nav ul {
-    flex-direction: column; /* Menu vertikal di mobile */
-    gap: 1rem;
+
+  .medsos-list {
+    flex-direction: column;
   }
 }
