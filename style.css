@@ -8,9 +8,9 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #333; /* Teks hitam untuk kontras dengan background putih */
   background-color: #FFFFFF; /* Putih sebagai background utama */
-  perspective: 1000px; /* Menambahkan perspektif untuk efek 3D global */
+  perspective: 1000px; /* Menambahkan perspektif untuk efek 3D global pada kotak */
 }
 
 /* Header dan Navigasi */
@@ -37,13 +37,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #FFFFFF; /* Putih untuk kontras */
-  transform: rotateX(5deg); /* Sedikit rotasi 3D untuk lucu */
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: rotateX(0deg) scale(1.05); /* Efek lucu saat hover */
+  color: #FFFFFF; /* Putih untuk kontras dengan background ungu muda */
 }
 
 .logo span {
@@ -60,16 +54,14 @@ ul li {
 }
 
 ul li a {
-  color: #FFFFFF;
+  color: #FFFFFF; /* Putih untuk kontras */
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
-  transform-style: preserve-3d;
+  transition: color 0.3s;
 }
 
 ul li a:hover {
   color: #DDA0DD; /* Ungu muda pada hover */
-  transform: translateZ(10px) rotateY(5deg); /* Efek 3D lucu */
 }
 
 /* Bagian Hero */
@@ -88,32 +80,25 @@ ul li a:hover {
 .hero-content {
   flex: 1;
   padding-right: 2rem;
-  transform: translateZ(20px); /* Efek kedalaman 3D */
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #E6E6FA; /* Ungu muda */
-  transform: rotateX(-2deg); /* Sedikit miring untuk lucu */
-  transition: transform 0.3s;
-}
-
-.hero-content h1:hover {
-  transform: rotateX(0deg) scale(1.02); /* Efek lucu */
+  color: #E6E6FA; /* Ungu muda untuk kontras dengan putih */
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #666;
+  color: #333; /* Hitam untuk kontras */
 }
 
 .btn-hero {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background-color: #E6E6FA; /* Ungu muda */
-  color: #FFFFFF;
+  color: #FFFFFF; /* Putih untuk kontras */
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
@@ -123,7 +108,7 @@ ul li a:hover {
 
 .btn-hero:hover {
   background-color: #DDA0DD; /* Ungu muda lebih gelap */
-  transform: translateY(-5px) rotateX(10deg); /* Efek melompat lucu */
+  transform: translateY(-5px); /* Efek mengambang pada tombol */
 }
 
 .hero-logo img {
@@ -133,7 +118,7 @@ ul li a:hover {
   object-fit: cover;
   border: 5px solid #E6E6FA; /* Ungu muda */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan 3D */
-  transform: rotateY(-5deg); /* Rotasi 3D lucu */
+  transform: rotateY(-5deg); /* Rotasi 3D lucu pada gambar */
   transition: transform 0.3s;
 }
 
@@ -152,21 +137,14 @@ ul li a:hover {
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #E6E6FA; /* Ungu muda */
-  transform: rotateX(3deg); /* Sedikit miring */
-  transition: transform 0.3s;
-}
-
-.about h2:hover {
-  transform: rotateX(0deg) scale(1.03); /* Efek lucu */
+  color: #E6E6FA; /* Ungu muda untuk kontras */
 }
 
 .about-content p {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.1rem;
-  color: #333;
-  transform: translateZ(10px); /* Kedalaman 3D */
+  color: #333; /* Hitam untuk kontras */
 }
 
 /* Bagian Proyek */
@@ -180,13 +158,7 @@ ul li a:hover {
 .proyek h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #E6E6FA; /* Ungu muda */
-  transform: rotateY(-2deg); /* Rotasi lucu */
-  transition: transform 0.3s;
-}
-
-.proyek h2:hover {
-  transform: rotateY(0deg) scale(1.02); /* Efek lucu */
+  color: #E6E6FA; /* Ungu muda untuk kontras */
 }
 
 .proyek-grid {
@@ -209,30 +181,28 @@ ul li a:hover {
 }
 
 .proyek-card:hover {
-  transform: translateY(-15px) rotateX(10deg) rotateY(5deg); /* Efek 3D lucu seperti kartu melayang */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 30px rgba(221, 160, 221, 0.4); /* Bayangan lebih dramatis */
+  transform: translateY(-15px) rotateX(10deg) rotateY(5deg); /* Efek 3D mengambang pada kotak kartu */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 30px rgba(221, 160, 221, 0.4); /* Bayangan lebih dramatis untuk efek mengambang */
 }
 
 .proyek-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transform: translateZ(5px); /* Kedalaman pada gambar */
 }
 
 .proyek-info {
   padding: 1rem;
-  transform: translateZ(10px); /* Kedalaman pada teks */
 }
 
 .proyek-info h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #E6E6FA; /* Ungu muda */
+  color: #E6E6FA; /* Ungu muda untuk kontras */
 }
 
 .proyek-info p {
-  color: #666;
+  color: #666; /* Abu-abu gelap untuk kontras */
 }
 
 /* Bagian Medsos */
@@ -246,13 +216,7 @@ ul li a:hover {
 .medsos h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #E6E6FA; /* Ungu muda */
-  transform: rotateX(-3deg); /* Miring lucu */
-  transition: transform 0.3s;
-}
-
-.medsos h2:hover {
-  transform: rotateX(0deg) scale(1.03); /* Efek lucu */
+  color: #E6E6FA; /* Ungu muda untuk kontras */
 }
 
 .medsos-list {
@@ -268,26 +232,30 @@ ul li a:hover {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #333;
+  color: #333; /* Hitam untuk kontras */
   transition: color 0.3s, transform 0.3s;
   transform-style: preserve-3d;
+  background-color: #FFFFFF; /* Background putih untuk kotak */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan 3D */
 }
 
 .medsos-item:hover {
   color: #E6E6FA; /* Ungu muda */
-  transform: translateZ(15px) rotateY(10deg); /* Efek 3D lucu */
+  transform: translateZ(15px) rotateY(10deg); /* Efek 3D mengambang pada kotak item */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat */
 }
 
 .medsos-item img {
   width: 50px;
   height: 50px;
   margin-bottom: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan 3D */
   transition: transform 0.3s;
 }
 
 .medsos-item:hover img {
-  transform: scale(1.1) rotateX(5deg); /* Efek lucu pada gambar */
+  transform: scale(1.1); /* Efek lucu pada gambar */
 }
 
 .medsos-item span {
@@ -297,7 +265,7 @@ ul li a:hover {
 /* Footer */
 footer {
   background-color: #E6E6FA; /* Ungu muda */
-  color: #FFFFFF;
+  color: #FFFFFF; /* Putih untuk kontras */
   text-align: center;
   padding: 1rem 0;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Bayangan 3D atas */
@@ -306,7 +274,6 @@ footer {
 
 footer p {
   margin: 0;
-  transform: translateZ(5px); /* Kedalaman */
 }
 
 /* Responsivitas */
