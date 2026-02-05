@@ -5,20 +5,20 @@
   box-sizing: border-box;
 }
 
-/* Mengatur font dasar untuk seluruh halaman, menggunakan font sans-serif yang modern dan mudah dibaca, seperti Arial atau Helvetica. Ini membuat teks terlihat rapi seperti surat resmi dari Belanda! */
+/* Mengatur font dasar untuk seluruh halaman, menggunakan font sans-serif yang modern dan mudah dibaca, seperti Arial atau Helvetica. Ini membuat teks terlihat rapi seperti surat resmi yang manis! */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333; /* Warna teks abu-abu gelap untuk kontras yang baik */
-  background-color: #ffffff; /* Latar belakang putih bersih, seperti salju di musim dingin Belanda */
+  background-color: #ffffff; /* Latar belakang putih bersih, seperti kapas yang lembut */
 }
 
-/* Styling untuk header, yang berisi navigasi. Menggunakan background biru gelap untuk mengingatkan pada bendera Belanda (biru dan putih) */
+/* Styling untuk header, yang berisi navigasi. Menggunakan background lilac untuk nuansa lembut dan feminin */
 header {
-  background-color: #003366; /* Biru gelap seperti langit Belanda */
+  background-color: #d4a5d4; /* Lilac ungu muda */
   color: #fff; /* Teks putih untuk kontras */
   padding: 1rem 0; /* Padding atas-bawah untuk ruang bernapas */
-  position: fixed; /* Navigasi tetap di atas saat scroll, seperti windmill yang tidak bergerak */
+  position: fixed; /* Navigasi tetap di atas saat scroll, seperti balon yang melayang */
   width: 100%;
   top: 0;
   z-index: 1000; /* Pastikan di atas elemen lain */
@@ -41,7 +41,7 @@ nav {
 }
 
 .logo span {
-  color: #ff6600; /* Oranye cerah seperti warna nasional Belanda */
+  color: #ff69b4; /* Pink cerah untuk aksen manis */
 }
 
 /* Styling untuk list menu navigasi, menghilangkan bullet dan membuat horizontal */
@@ -59,14 +59,14 @@ li a {
   transition: color 0.3s; /* Transisi halus saat hover */
 }
 
-/* Efek hover untuk link navigasi, berubah jadi oranye */
+/* Efek hover untuk link navigasi, berubah jadi pink */
 li a:hover {
-  color: #ff6600; /* Oranye saat hover, seperti bunga tulip yang mekar */
+  color: #ff69b4; /* Pink saat hover, seperti permen yang menggoda */
 }
 
-/* Styling untuk section hero, yang merupakan bagian sambutan. Menggunakan background gradien biru ke putih untuk efek modern */
+/* Styling untuk section hero, yang merupakan bagian sambutan. Menggunakan background gradien lilac ke putih untuk efek modern dan lembut */
 .hero {
-  background: linear-gradient(to right, #003366, #ffffff); /* Gradien dari biru ke putih */
+  background: linear-gradient(to right, #d4a5d4, #ffffff); /* Gradien dari lilac ke putih */
   padding: 100px 2rem 50px; /* Padding atas lebih besar untuk akomodasi nav fixed */
   display: flex; /* Flexbox untuk layout konten dan gambar */
   align-items: center; /* Vertikal center */
@@ -86,7 +86,7 @@ li a:hover {
 .hero-content h1 {
   font-size: 3rem; /* Besar dan bold */
   margin-bottom: 1rem;
-  color: #003366; /* Biru gelap */
+  color: #d4a5d4; /* Lilac */
 }
 
 /* Styling untuk paragraf di hero */
@@ -96,9 +96,9 @@ li a:hover {
   color: #666; /* Abu-abu */
 }
 
-/* Styling untuk tombol hero, dengan background oranye dan efek hover */
+/* Styling untuk tombol hero, dengan background pink dan efek hover */
 .btn-hero {
-  background-color: #ff6600; /* Oranye */
+  background-color: #ff69b4; /* Pink */
   color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -109,14 +109,14 @@ li a:hover {
 
 /* Efek hover untuk tombol hero */
 .btn-hero:hover {
-  background-color: #e55a00; /* Oranye gelap saat hover, seperti stroopwafel yang hangat */
+  background-color: #ff1493; /* Pink gelap saat hover, seperti cupcake yang hangat */
 }
 
 /* Styling untuk gambar di hero */
 .hero-logo img {
   max-width: 300px; /* Ukuran gambar */
-  border-radius: 50%; /* Bulat seperti kue ronde Belanda */
-  border: 5px solid #ff6600; /* Border oranye */
+  border-radius: 50%; /* Bulat seperti kue bundar */
+  border: 5px solid #ff69b4; /* Border pink */
 }
 
 /* Styling untuk section about, dengan background putih dan padding */
@@ -131,7 +131,7 @@ li a:hover {
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #003366; /* Biru */
+  color: #d4a5d4; /* Lilac */
   text-align: center; /* Center */
 }
 
@@ -142,10 +142,10 @@ li a:hover {
   margin-bottom: 1rem;
 }
 
-/* Styling untuk section proyek, dengan background abu-abu terang untuk kontras */
+/* Styling untuk section proyek, dengan background putih untuk kontras lembut */
 .proyek {
   padding: 4rem 2rem;
-  background-color: #f4f4f4; /* Abu-abu terang */
+  background-color: #ffffff; /* Putih */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -154,7 +154,7 @@ li a:hover {
 .proyek h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #003366;
+  color: #d4a5d4; /* Lilac */
   text-align: center;
 }
 
@@ -175,7 +175,7 @@ li a:hover {
   transition: transform 0.3s; /* Transisi untuk efek hover */
 }
 
-/* Efek hover untuk kartu proyek, sedikit naik seperti layang-layang Belanda */
+/* Efek hover untuk kartu proyek, sedikit naik seperti balon yang naik */
 .proyek-card:hover {
   transform: translateY(-5px); /* Naik 5px */
 }
@@ -196,7 +196,7 @@ li a:hover {
 .proyek-info h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #003366;
+  color: #d4a5d4; /* Lilac */
 }
 
 /* Styling untuk paragraf di info kartu */
@@ -204,10 +204,10 @@ li a:hover {
   color: #666;
 }
 
-/* Styling untuk section medsos, dengan background biru terang */
+/* Styling untuk section medsos, dengan background putih untuk kesederhanaan */
 .medsos {
   padding: 4rem 2rem;
-  background-color: #cce7ff; /* Biru terang seperti kanal Belanda */
+  background-color: #ffffff; /* Putih */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -216,7 +216,7 @@ li a:hover {
 .medsos h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #003366;
+  color: #d4a5d4; /* Lilac */
   text-align: center;
 }
 
@@ -232,13 +232,13 @@ li a:hover {
   display: flex; /* Flex untuk gambar dan teks */
   align-items: center; /* Vertikal center */
   text-decoration: none; /* Hilangkan garis bawah */
-  color: #003366;
+  color: #d4a5d4; /* Lilac */
   transition: color 0.3s; /* Transisi */
 }
 
 /* Efek hover untuk item medsos */
 .medsos-item:hover {
-  color: #ff6600; /* Oranye saat hover */
+  color: #ff69b4; /* Pink saat hover */
 }
 
 /* Styling untuk gambar di medsos */
@@ -247,16 +247,103 @@ li a:hover {
   margin-right: 0.5rem; /* Jarak dari teks */
 }
 
-/* Styling untuk footer, dengan background biru gelap dan teks center */
+/* Styling untuk footer, dengan background lilac dan teks center */
 footer {
-  background-color: #003366;
+  background-color: #d4a5d4; /* Lilac */
   color: #fff;
   text-align: center;
   padding: 1rem 0;
 }
 
-/* Responsivitas untuk layar kecil, tapi fokus pada laptop jadi minimal. Jika perlu, tambahkan media query nanti. Ini sudah cukup untuk laptop! */
+/* Responsivitas untuk iPhone dan layar kecil (max-width: 768px), agar tampilan mobile-friendly seperti aplikasi iOS yang halus */
+@media (max-width: 768px) {
+  /* Navigasi di mobile: sembunyikan menu utama dan tambahkan hamburger menu (meskipun HTML belum ada, ini persiapan) */
+  ul {
+    display: none; /* Sembunyikan menu horizontal */
+    flex-direction: column; /* Jika ditampilkan, jadi vertikal */
+    position: absolute; /* Posisi absolut untuk dropdown */
+    top: 100%; /* Di bawah header */
+    left: 0;
+    width: 100%;
+    background-color: #d4a5d4; /* Background lilac */
+    padding: 1rem 0;
+    gap: 1rem; /* Jarak vertikal */
+  }
 
-/* Keyword lucu: "Windmill Wonders" - karena Belanda penuh windmill, dan ini membuat desainmu berputar keren! */
-/* Keyword lucu lainnya: "Tulip Tango" - untuk efek hover yang mekar seperti bunga tulip! */
-/* Keyword lucu: "Stroopwafel Style" - karena tombol oranye seperti kue manis Belanda! */
+  /* Tambahkan class 'active' untuk menampilkan menu saat hamburger diklik (perlu JavaScript untuk toggle) */
+  ul.active {
+    display: flex; /* Tampilkan saat aktif */
+  }
+
+  /* Hero section di mobile: stack vertikal */
+  .hero {
+    flex-direction: column; /* Vertikal */
+    text-align: center; /* Center teks */
+    padding: 120px 1rem 50px; /* Padding lebih kecil */
+    min-height: 70vh; /* Tinggi lebih kecil */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Penuh lebar */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Lebih kecil */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Lebih kecil */
+  }
+
+  .hero-logo img {
+    max-width: 200px; /* Lebih kecil */
+    margin-top: 2rem; /* Jarak dari teks */
+  }
+
+  /* About section di mobile */
+  .about {
+    padding: 2rem 1rem; /* Padding lebih kecil */
+  }
+
+  .about h2 {
+    font-size: 2rem; /* Lebih kecil */
+  }
+
+  /* Proyek grid di mobile: satu kolom */
+  .proyek-grid {
+    grid-template-columns: 1fr; /* Satu kolom */
+    gap: 1rem; /* Jarak lebih kecil */
+  }
+
+  .proyek {
+    padding: 2rem 1rem; /* Padding lebih kecil */
+  }
+
+  .proyek h2 {
+    font-size: 2rem; /* Lebih kecil */
+  }
+
+  /* Medsos di mobile: vertikal */
+  .medsos-list {
+    flex-direction: column; /* Vertikal */
+    gap: 1rem; /* Jarak */
+  }
+
+  .medsos {
+    padding: 2rem 1rem; /* Padding lebih kecil */
+  }
+
+  .medsos h2 {
+    font-size: 2rem; /* Lebih kecil */
+  }
+
+  /* Footer di mobile */
+  footer {
+    padding: 0.5rem 0; /* Padding lebih kecil */
+  }
+}
+
+/* Keyword lucu: "Lilac Lavender Dreams" - karena lilac seperti lavender yang bermimpi indah! */
+/* Keyword lucu lainnya: "Pink Petal Parade" - untuk efek hover yang mekar seperti kelopak bunga pink! */
+/* Keyword lucu: "Cupcake Charm" - karena tombol pink seperti cupcake yang menggemaskan! */
+/* Keyword lucu untuk mobile: "iPhone Ice Cream Swirl" - karena desain mobile yang lembut seperti es krim yang berputar di layar iPhone! */
