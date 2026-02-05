@@ -30,6 +30,17 @@
   display: inline-block;
 }
 
+/* Mengubah kursor untuk seluruh halaman */
+html, body {
+    /* 'auto' adalah fallback jika gambar gagal dimuat */
+    cursor: url('Untitled_design-removebg-preview.png'), auto;
+}
+
+/* Opsional: Ubah kursor saat diarahkan ke tombol atau link agar lebih interaktif */
+a, button, .btn-hero {
+    cursor: url('Untitled_design-removebg-preview.png'), pointer;
+}
+
 
 /* Animasi membal (bounce) untuk emoji */
 @keyframes bounce {
