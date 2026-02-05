@@ -1,316 +1,262 @@
-/* Reset dan Font */
+/* Reset dasar untuk menghilangkan margin dan padding default browser, agar semua elemen dimulai dari nol yang bersih. Ini seperti membersihkan papan tulis sebelum menggambar! */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Mengatur font dasar untuk seluruh halaman, menggunakan font sans-serif yang modern dan mudah dibaca, seperti Arial atau Helvetica. Ini membuat teks terlihat rapi seperti surat resmi dari Belanda! */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333; /* Teks hitam untuk kontras dengan background putih */
-  background-color: #FFFFFF; /* Putih sebagai background utama */
-  perspective: 1000px; /* Menambahkan perspektif untuk efek 3D global pada kotak */
+  color: #333; /* Warna teks abu-abu gelap untuk kontras yang baik */
+  background-color: #ffffff; /* Latar belakang putih bersih, seperti salju di musim dingin Belanda */
 }
 
-/* Header dan Navigasi */
+/* Styling untuk header, yang berisi navigasi. Menggunakan background biru gelap untuk mengingatkan pada bendera Belanda (biru dan putih) */
 header {
-  background-color: #E6E6FA; /* Ungu muda (lavender) */
-  padding: 1rem 0;
-  position: fixed;
+  background-color: #003366; /* Biru gelap seperti langit Belanda */
+  color: #fff; /* Teks putih untuk kontras */
+  padding: 1rem 0; /* Padding atas-bawah untuk ruang bernapas */
+  position: fixed; /* Navigasi tetap di atas saat scroll, seperti windmill yang tidak bergerak */
   width: 100%;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek 3D dengan bayangan */
-  transform-style: preserve-3d; /* Mendukung efek 3D */
+  z-index: 1000; /* Pastikan di atas elemen lain */
 }
 
+/* Styling untuk navigasi, menggunakan flexbox untuk menyusun logo dan menu secara horizontal */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  display: flex; /* Flexbox untuk layout horizontal */
+  justify-content: space-between; /* Logo di kiri, menu di kanan */
+  align-items: center; /* Vertikal center */
+  max-width: 1200px; /* Lebar maksimal untuk tampilan laptop */
+  margin: 0 auto; /* Center secara horizontal */
+  padding: 0 2rem; /* Padding kiri-kanan */
 }
 
+/* Styling untuk logo, dengan span yang berbeda warna untuk efek keren */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #FFFFFF; /* Putih untuk kontras dengan background ungu muda */
 }
 
 .logo span {
-  color: #DDA0DD; /* Ungu muda lebih gelap untuk aksen */
+  color: #ff6600; /* Oranye cerah seperti warna nasional Belanda */
 }
 
+/* Styling untuk list menu navigasi, menghilangkan bullet dan membuat horizontal */
 ul {
-  list-style: none;
-  display: flex;
+  list-style: none; /* Hilangkan bullet */
+  display: flex; /* Horizontal layout */
+  gap: 2rem; /* Jarak antar item */
 }
 
-ul li {
-  margin-left: 2rem;
+/* Styling untuk link di navigasi */
+li a {
+  color: #fff; /* Putih */
+  text-decoration: none; /* Hilangkan garis bawah */
+  font-weight: 500;
+  transition: color 0.3s; /* Transisi halus saat hover */
 }
 
-ul li a {
-  color: #FFFFFF; /* Putih untuk kontras */
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+/* Efek hover untuk link navigasi, berubah jadi oranye */
+li a:hover {
+  color: #ff6600; /* Oranye saat hover, seperti bunga tulip yang mekar */
 }
 
-ul li a:hover {
-  color: #DDA0DD; /* Ungu muda pada hover */
-}
-
-/* Bagian Hero */
+/* Styling untuk section hero, yang merupakan bagian sambutan. Menggunakan background gradien biru ke putih untuk efek modern */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 2rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-  min-height: 100vh;
-  transform-style: preserve-3d;
+  background: linear-gradient(to right, #003366, #ffffff); /* Gradien dari biru ke putih */
+  padding: 100px 2rem 50px; /* Padding atas lebih besar untuk akomodasi nav fixed */
+  display: flex; /* Flexbox untuk layout konten dan gambar */
+  align-items: center; /* Vertikal center */
+  justify-content: space-between; /* Konten kiri, gambar kanan */
+  min-height: 80vh; /* Tinggi minimal untuk tampilan penuh */
+  max-width: 1200px; /* Lebar maksimal */
+  margin: 0 auto; /* Center */
 }
 
+/* Styling untuk konten hero */
 .hero-content {
-  flex: 1;
-  padding-right: 2rem;
+  flex: 1; /* Ambil ruang yang tersedia */
+  max-width: 50%; /* Maksimal setengah lebar */
 }
 
+/* Styling untuk heading utama di hero */
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3rem; /* Besar dan bold */
   margin-bottom: 1rem;
-  color: #E6E6FA; /* Ungu muda untuk kontras dengan putih */
+  color: #003366; /* Biru gelap */
 }
 
+/* Styling untuk paragraf di hero */
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #333; /* Hitam untuk kontras */
+  color: #666; /* Abu-abu */
 }
 
+/* Styling untuk tombol hero, dengan background oranye dan efek hover */
 .btn-hero {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #E6E6FA; /* Ungu muda */
-  color: #FFFFFF; /* Putih untuk kontras */
+  background-color: #ff6600; /* Oranye */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan 3D */
-  transform-style: preserve-3d;
+  border-radius: 5px; /* Sudut bulat */
+  transition: background-color 0.3s; /* Transisi halus */
+  display: inline-block; /* Agar bisa di-style seperti tombol */
 }
 
+/* Efek hover untuk tombol hero */
 .btn-hero:hover {
-  background-color: #DDA0DD; /* Ungu muda lebih gelap */
-  transform: translateY(-5px); /* Efek mengambang pada tombol */
+  background-color: #e55a00; /* Oranye gelap saat hover, seperti stroopwafel yang hangat */
 }
 
+/* Styling untuk gambar di hero */
 .hero-logo img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #E6E6FA; /* Ungu muda */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan 3D */
-  transform: rotateY(-5deg); /* Rotasi 3D lucu pada gambar */
-  transition: transform 0.3s;
+  max-width: 300px; /* Ukuran gambar */
+  border-radius: 50%; /* Bulat seperti kue ronde Belanda */
+  border: 5px solid #ff6600; /* Border oranye */
 }
 
-.hero-logo img:hover {
-  transform: rotateY(0deg) scale(1.05); /* Efek lucu saat hover */
-}
-
-/* Bagian About */
+/* Styling untuk section about, dengan background putih dan padding */
 .about {
   padding: 4rem 2rem;
-  background-color: #FFFFFF;
-  text-align: center;
-  transform-style: preserve-3d;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #E6E6FA; /* Ungu muda untuk kontras */
-}
-
-.about-content p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #333; /* Hitam untuk kontras */
-}
-
-/* Bagian Proyek */
-.proyek {
-  padding: 4rem 2rem;
-  background-color: #F8F8FF; /* Putih dengan sedikit ungu muda */
-  text-align: center;
-  transform-style: preserve-3d;
-}
-
-.proyek h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #E6E6FA; /* Ungu muda untuk kontras */
-}
-
-.proyek-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  background-color: #ffffff; /* Putih */
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Styling untuk heading di about */
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #003366; /* Biru */
+  text-align: center; /* Center */
+}
+
+/* Styling untuk konten about */
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Styling untuk section proyek, dengan background abu-abu terang untuk kontras */
+.proyek {
+  padding: 4rem 2rem;
+  background-color: #f4f4f4; /* Abu-abu terang */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling untuk heading di proyek */
+.proyek h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #003366;
+  text-align: center;
+}
+
+/* Styling untuk grid proyek, menggunakan CSS Grid untuk kartu yang sejajar */
+.proyek-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom otomatis, minimal 300px */
+  gap: 2rem; /* Jarak antar kartu */
+}
+
+/* Styling untuk kartu proyek */
 .proyek-card {
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(230, 230, 250, 0.3); /* Bayangan 3D dengan glow ungu muda */
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
-  color: inherit;
-  transform-style: preserve-3d;
+  background-color: #fff; /* Putih */
+  border-radius: 10px; /* Sudut bulat */
+  overflow: hidden; /* Potong gambar yang keluar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  text-decoration: none; /* Hilangkan garis bawah link */
+  transition: transform 0.3s; /* Transisi untuk efek hover */
 }
 
+/* Efek hover untuk kartu proyek, sedikit naik seperti layang-layang Belanda */
 .proyek-card:hover {
-  transform: translateY(-15px) rotateX(10deg) rotateY(5deg); /* Efek 3D mengambang pada kotak kartu */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 30px rgba(221, 160, 221, 0.4); /* Bayangan lebih dramatis untuk efek mengambang */
+  transform: translateY(-5px); /* Naik 5px */
 }
 
+/* Styling untuk gambar di kartu proyek */
 .proyek-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%; /* Penuh lebar */
+  height: 200px; /* Tinggi tetap */
+  object-fit: cover; /* Potong gambar agar pas */
 }
 
+/* Styling untuk info di kartu proyek */
 .proyek-info {
   padding: 1rem;
 }
 
+/* Styling untuk heading di info kartu */
 .proyek-info h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #E6E6FA; /* Ungu muda untuk kontras */
+  color: #003366;
 }
 
+/* Styling untuk paragraf di info kartu */
 .proyek-info p {
-  color: #666; /* Abu-abu gelap untuk kontras */
+  color: #666;
 }
 
-/* Bagian Medsos */
+/* Styling untuk section medsos, dengan background biru terang */
 .medsos {
   padding: 4rem 2rem;
-  background-color: #FFFFFF;
-  text-align: center;
-  transform-style: preserve-3d;
-}
-
-.medsos h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #E6E6FA; /* Ungu muda untuk kontras */
-}
-
-.medsos-list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 600px;
+  background-color: #cce7ff; /* Biru terang seperti kanal Belanda */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Styling untuk heading di medsos */
+.medsos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #003366;
+  text-align: center;
+}
+
+/* Styling untuk list medsos, menggunakan flexbox untuk horizontal */
+.medsos-list {
+  display: flex; /* Horizontal */
+  justify-content: center; /* Center */
+  gap: 2rem; /* Jarak */
+}
+
+/* Styling untuk item medsos */
 .medsos-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333; /* Hitam untuk kontras */
-  transition: color 0.3s, transform 0.3s;
-  transform-style: preserve-3d;
-  background-color: #FFFFFF; /* Background putih untuk kotak */
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan 3D */
+  display: flex; /* Flex untuk gambar dan teks */
+  align-items: center; /* Vertikal center */
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: #003366;
+  transition: color 0.3s; /* Transisi */
 }
 
+/* Efek hover untuk item medsos */
 .medsos-item:hover {
-  color: #E6E6FA; /* Ungu muda */
-  transform: translateZ(15px) rotateY(10deg); /* Efek 3D mengambang pada kotak item */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat */
+  color: #ff6600; /* Oranye saat hover */
 }
 
+/* Styling untuk gambar di medsos */
 .medsos-item img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s;
+  width: 40px; /* Ukuran ikon */
+  margin-right: 0.5rem; /* Jarak dari teks */
 }
 
-.medsos-item:hover img {
-  transform: scale(1.1); /* Efek lucu pada gambar */
-}
-
-.medsos-item span {
-  font-weight: bold;
-}
-
-/* Footer */
+/* Styling untuk footer, dengan background biru gelap dan teks center */
 footer {
-  background-color: #E6E6FA; /* Ungu muda */
-  color: #FFFFFF; /* Putih untuk kontras */
+  background-color: #003366;
+  color: #fff;
   text-align: center;
   padding: 1rem 0;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Bayangan 3D atas */
-  transform-style: preserve-3d;
 }
 
-footer p {
-  margin: 0;
-}
+/* Responsivitas untuk layar kecil, tapi fokus pada laptop jadi minimal. Jika perlu, tambahkan media query nanti. Ini sudah cukup untuk laptop! */
 
-/* Responsivitas */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  ul {
-    margin-top: 1rem;
-  }
-
-  ul li {
-    margin: 0 1rem;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 6rem;
-  }
-
-  .hero-content {
-    padding-right: 0;
-  }
-
-  .hero-logo img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .proyek-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .medsos-list {
-    flex-direction: column;
-  }
-}
+/* Keyword lucu: "Windmill Wonders" - karena Belanda penuh windmill, dan ini membuat desainmu berputar keren! */
+/* Keyword lucu lainnya: "Tulip Tango" - untuk efek hover yang mekar seperti bunga tulip! */
+/* Keyword lucu: "Stroopwafel Style" - karena tombol oranye seperti kue manis Belanda! */
