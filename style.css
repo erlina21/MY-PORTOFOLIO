@@ -82,11 +82,15 @@ li a:hover {
   max-width: 50%; /* Maksimal setengah lebar */
 }
 
-/* Styling untuk heading utama di hero */
+/* Styling untuk heading utama di hero - DIUBAH: Sekarang menggunakan gradasi ungu ke putih untuk teks "ERLINA PEBRIANTI" */
 .hero-content h1 {
   font-size: 3rem; /* Besar dan bold */
   margin-bottom: 1rem;
-  color: #d4a5d4; /* Lilac */
+  background: linear-gradient(to right, #d4a5d4, #ffffff); /* Gradasi ungu (lilac) ke putih */
+  -webkit-background-clip: text; /* Untuk browser WebKit seperti Safari */
+  -webkit-text-fill-color: transparent; /* Buat teks transparan agar gradasi terlihat */
+  background-clip: text; /* Untuk browser lain */
+  color: transparent; /* Fallback untuk browser yang tidak mendukung */
 }
 
 /* Styling untuk paragraf di hero */
